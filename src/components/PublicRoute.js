@@ -11,9 +11,13 @@ export const PublicRoute = ({ children, ...routeProps }) => {
 
 
   if(!isLoading && profile)
-  {return <Container>
+  {
+    if (profile&&!isLoading) { return <Redirect to="/"></Redirect> }
+
+      return <Container>
       <Loader center vertical size="md" content="Loading" speed="slow" />
       </Container>
+      
   }
     if (profile&&!isLoading) { return <Redirect to="/"></Redirect> }
 

@@ -29,6 +29,7 @@ export const ProfileProvider = ({ children }) => {
                   
                 setProfile(data);
                 setIsLoading(false);
+                console.log('here2')
 
                 });
               
@@ -40,6 +41,7 @@ export const ProfileProvider = ({ children }) => {
                 {
                     userRef.off();
                 }
+                console.log('here')
                 setProfile(null);
                 setIsLoading(false);
 
