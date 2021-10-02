@@ -2,6 +2,8 @@ import React from 'react'
 import { Button, Divider, Drawer } from 'rsuite';
 import {useProfile} from '../../context/ProfileContext'
 import EditableInput from '../EditableInput';
+import ProviderBlock from '../dashboard/ProviderBlock'
+import AvatarUploadBtn from './AvatarUploadBtn';
 
 const Dashboard = ({onSignOut}) => {
     const {profile}=useProfile();
@@ -20,6 +22,7 @@ Dashboard
        <h3>
            Hey,{profile.name}
        </h3>
+       <ProviderBlock/>
 
        <Divider/>
        <EditableInput
@@ -27,6 +30,7 @@ Dashboard
        label={<h6 className="mb-2">Nickname</h6>}
        name="nickname"
        />
+       <AvatarUploadBtn/>
        </Drawer.Body>
        
        <Drawer.Footer>

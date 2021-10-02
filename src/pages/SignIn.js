@@ -9,6 +9,11 @@ export const SignIn = () => {
     const onGoogleSignIn = () => {
         signInWithProvider(new firebase.auth.GoogleAuthProvider());
     }
+
+    const onFacebookSignIn=()=>{
+        signInWithProvider(new firebase.auth.FacebookAuthProvider());
+
+    }
     const signInWithProvider = async (provider) => {
 
 
@@ -52,7 +57,7 @@ export const SignIn = () => {
                                 <Icon className="mr-2" icon="google" ></Icon>
                                 Continue with Google
                             </Button>
-                            <Button block disabled color="blue">
+                            <Button block color="blue" onClick={onFacebookSignIn}>
                                 <Icon className="mr-2" icon="facebook" ></Icon>
                                 Continue with Facebook
                             </Button>
