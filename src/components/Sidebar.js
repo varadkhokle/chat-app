@@ -1,4 +1,5 @@
 import React from 'react'
+import CreateRoomBtnModal from './CreateRoomBtnModal';
 import DashboardToggler from './dashboard/DashboardToggler'
 
 const Sidebar = () => {
@@ -7,6 +8,7 @@ const Sidebar = () => {
 
             <div>
            <DashboardToggler/>
+           <CreateRoomBtnModal></CreateRoomBtnModal>
             </div>
 
             bottom

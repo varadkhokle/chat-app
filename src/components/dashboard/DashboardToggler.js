@@ -20,7 +20,7 @@ const DashboardToggler = () => {
             <Button block color="blue" onClick={open}>
                 <Icon mr-2 icon="dashboard" />Dashboard
             </Button>
-            <Drawer full show={isOpen} onHide={close} placement="left">
+            <Drawer className="maxW" full show={isOpen} onHide={close} placement="left">
               <Dashboard onSignOut={onSignOut} ></Dashboard>
             </Drawer>
 
